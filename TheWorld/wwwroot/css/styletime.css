@@ -1,0 +1,422 @@
+/*RESETS*/
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*END RESETS*/
+
+
+
+/*GENERAL*/
+.note{
+    color: orange;
+    position: fixed;
+    bottom: 3em;
+    margin: 0 3em;
+    background-color: rgba(0,0,0,0.8);
+    padding: 1em;
+    font-size: 0.75em;
+}
+
+
+
+/*BODY*/
+
+
+body{
+    font-family: 'Open Sans', sans-serif; /*Content font*/
+}
+
+
+/*IMAGE*/
+
+
+.bg{
+    background-image: url("../img/bg/bg479v.jpg"); /*vertical image for mobile*/
+    min-height: 100%; /*fills screen height*/
+    background-attachment: fixed; /*bg-image is fixed and set to cover*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*NAV*/
+
+
+.nav__container{ 
+    /*Flex container, items centered Vert. and Hori.*/
+    display: flex;
+    flex-wrap: nowrap;
+    height: 4.5em;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.hamnav{ 
+    /*Hamnav is absolute in top left*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0.7em;
+    height: 3em;
+}
+.logo{ 
+    /*Logo*/
+    height: 3em;
+}
+
+.nav__ul{ 
+    /*Right margin*/
+    margin: 0 1.166em 0 0;
+}
+.nav__items{ 
+    /*basic item things*/
+    padding: 0.75em;
+    margin:0.3333em;
+    font-size: 1em;
+    font-weight: 500;
+    color: rgba(250, 250, 250, 1);
+    transition: all 0.3s ease-in-out; 
+}
+.nav__items:hover { 
+    /*On hover to teal over .3s*/
+    color: rgba(0, 150, 153, 1);
+}
+.logo__name{ 
+    /*Top left name next to logo*/
+    position: absolute;
+    left: 2.15em;
+    top: 0.25em;
+    margin: 0.7em;
+    font-weight: 500;  
+    font-size: 1.55em;
+    color: rgba(255,255,255,1);
+    transition: all 0.3s ease-in-out; 
+}
+.logo__name:hover { 
+    /*0.3 sec transition to teal*/
+    color: rgba(0, 150, 153, 0.9);
+}
+.nav__ul, .logo__name{ 
+    /*Don't show until screen is large enough*/
+    display: none;
+}
+
+
+/*MAIN*/
+main{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*BIG BOX LEARNING*/
+
+
+.learning__container{ 
+    /*Flexbox, wrapping, centered items, single column*/
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0em 1.5em; /*This padding sets the container width*/
+    justify-content: center;
+    max-width: 75em;
+}
+.lheader{
+    /*Learning Header is Raleway, spacing*/
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.75em;
+    padding: 1em;
+    margin: 1em auto 0 auto;
+    width: 100%;
+}
+.icon__wrap{
+    /*Icon wrap for spacing, centered*/
+    width: 100%;
+    align-self: center;
+    margin: 1em auto;
+}
+.icon{
+    /*Circular icons with slight shadow*/
+    height: 5em;
+    border-radius: 100px;
+    box-shadow: 7px 7px 15px rgba(0,0,0,0.1);
+}
+.fig__header{
+    /*Figure Header is Raleway*/
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    padding: 0.5em;
+    width: 100%;
+}
+.fig__caption{
+    /*Spacing and font things*/
+    font-size: 0.9em;
+    line-height: 1.75;
+    width: 100%;
+    color: rgba(0,0,0,0.65);
+    margin: 0 0 1em 0;
+}
+.pic__wrap{
+    /*Imagebox, containing and centered with spacing*/
+    margin: 0em auto 1em auto;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-height: 15em;
+    width: 100%;    
+}
+.pic1{
+    background-image: url("../img/lbox/AS1479.jpg");
+}
+.pic2{
+    background-image: url("../img/lbox/PP479.jpg");
+}
+.pic3{
+    background-image: url("../img/lbox/HTML479.jpg");
+}
+.projects__link{
+    /*Bold*/
+    font-weight: 600;
+}
+
+.lheader, #fig__header1, #frontend__link a{
+    /*Share same color*/
+    color: rgba(0, 150, 153, 1);
+}
+#fig__header2, #backend__link a{
+    /*Same color as icon2*/
+    color: rgba(150, 20, 153, 1);
+}
+#fig__header3, #design__link a{
+    /*third color*/
+    color: rgba(250, 200, 0, 1);
+}
+
+
+/*SELF QUOTE*/
+
+
+
+
+/*SIDE BY SIDE PROJECTS WITH ICONS*/
+
+
+
+
+/*CONTACT ME*/
+
+
+
+
+
+
+/*MEDIA QUERIES*/
+
+
+
+
+
+/*479 MIN WIDTH*/
+
+
+@media only screen and (min-width: 479px){
+    /*Above 479 - bg image opt., nav items are displayed and pushed right, hamnav is hidden, logo is adjusted, logo name appears*/
+    .bg{
+        background-image: url("../img/bg/bg479h.jpg"); 
+    }
+    
+    
+    /*NAV*/
+    .nav__container{
+        justify-content: flex-end;
+    }
+    .nav__ul{
+        display: inherit;
+    }
+    .hamnav{
+        display: none;
+    }
+    .logo{
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0.7em 0 0.7em 1.5em;
+    }
+    .logo__name{
+        display:inherit;
+    }
+}
+
+
+/*608 MIN WIDTH*/
+
+
+@media only screen and (min-width: 608px){
+    /*Figure caption size standardized*/
+    .fig__caption{ 
+        width: 450px;
+    }    
+}
+
+
+/*668 MIN WIDTH*/
+
+
+@media only screen and (min-width: 668px){
+    /*Nav height increase and item spacing increase */
+    .nav__container, #hamnav{
+         height: 6em;
+    }
+    .logo{
+        margin: 1.5em 0 0.7em 1.5em;
+    }
+    .logo__name{
+        left: 2.15em;
+        top: 1.25em;
+        margin: 0.7em;
+    }
+    .nav__ul{
+        margin: 0 2.166em 0 0;
+    }
+    .nav__items{
+        padding: 1.15em;
+        margin:1.3333em;
+    }
+}
+
+
+/*768 MIN WIDTH PORTRAIT*/
+
+
+@media only screen and (min-width:768px) and (orientation : portrait){
+    /*Image opt.*/
+    .bg{
+       background-image: url("../img/bg/bg768v.jpg"); 
+    }
+}
+
+
+/*850 MIN WIDTH*/
+
+
+@media only screen and (min-width:850px){
+    /*Change 1 column design to 2 columns*/
+    .lbox{
+        display: flex;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        width: 100%;
+        margin: 2em auto 1em auto;
+    }
+    .icon{
+        height: 4em;
+    }
+    .cbox{ 
+        /*flexbox to wrap items*/
+        width: 45%;
+        align-content: center;
+        justify-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 auto 2em auto;
+    }
+    .pic__wrap{
+        width: 45%;
+    }
+    
+    #cbox2{ 
+        /*Alternating image design*/
+        order: 2;
+    }
+}
+
+
+/*1024 MIN WIDTH LANDSCAPE*/
+
+
+@media only screen and (min-width: 1024px) and (orientation : landscape){
+    /*Image opt.*/
+    .bg{
+        background-image: url(../img/bg/bg1024h.jpg);
+    }
+}
+
+
+/*1367 MIN WIDTH*/
+
+
+@media only screen and (min-width: 1367px){
+    /*Spacing and image opt*/
+    .bg{
+        background-image: url(../img/bg/bg1500h.jpg);
+        }
+    /*NAV*/
+        .nav__ul{
+            margin: 0 3.166em 0 0;
+        }
+        .nav__items{
+            padding: 1.25em;
+            margin:1.8333em;
+        }
+    
+}
