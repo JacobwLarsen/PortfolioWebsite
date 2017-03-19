@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="en">
+    
 <head>
     <meta charset="utf-8" />
     
@@ -9,37 +11,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="../css/styletime.css" />
-    
 </head>
     
-<body>
-    
-<!--    NAV SECTION-->
-    <!DOCTYPE html>
-<html lang="en">
-   
-    <head>
-        <meta charset="utf-8">
-        
-        <title>Jake Larsen - Developer Portfolio</title>
-        <meta name="description" content="Frontend and Backened developer portfolio for Jacob Larsen - Check out my current projects!">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="#">
-        
-        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">    
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-        
-        <link rel="stylesheet" href="css/styletime.css" type="text/css">
-    </head>
-    
     <body>
-        <p class="note">This is simply a mockup for now. Responsiveness, optimization, and content will be added soon. Site coming soon - March 2017.</p>
+        <p id="note" class="note">This is simply a mockup for now. Responsiveness, optimization, and content will be added soon. Site coming soon - March 2017.</p>
         <div id="bg" class="bg">
             <nav id="nav" class="nav__container">
-                <a href="#" class="hamnava">
+                <a href="#" class="hamnava" id="navToggle">
                     <img id="hamnav" class="hamnav" src="img/hamnav/hamnav_black.svg">
                 </a>
                 <a href="#" class="logoa">
@@ -108,16 +89,36 @@
                 </div>
             </section>
             
-            <section id="statement" class="statement__container">
-            
+            <section id="statement" class="statement__background">
+                <div id="statement__container" class="statement__container">
+                    <div id="quote__header">Quote of the day</div>
+                    <div id="quote" class="statement__quote">
+                        "My mission in life is not merely to survive, but to thrive;
+                        and to do so with some passion, some compassion, some humor, and some style."
+                    </div>
+                    <div id="quote__footer">-Maya Angelou-</div>
+                </div>
             </section>
+            
             <section id="projects" class="projects__container">
+                <div id="projects__header" class="pheader">Start Projects Section</div>
+                <div id="project1" class="projectbox"></div>
             
             </section>
             <section id="contact" class="contact__container"></section>
         </main>
     
-        <footer id="footer" class="footer">&copy; 2017 - Jacob Larsen.</footer>
+        <footer id="footer" class="footer">
+            <div id="copyright" class="copyright">
+                &copy; 2017 - Jacob Larsen.
+            </div>
+        </footer>
+        
+        
+        
+        
+        <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="js/mainscript.js"></script>
 </body>
     
 </html>

@@ -161,7 +161,7 @@ body{
 main{
     width: 100%;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
@@ -179,6 +179,7 @@ main{
     padding: 0em 1.5em; /*This padding sets the container width*/
     justify-content: center;
     max-width: 75em;
+    margin: 0 0 5em 0;
 }
 .lheader{
     /*Learning Header is Raleway, spacing*/
@@ -244,29 +245,100 @@ main{
 
 .lheader, #fig__header1, #frontend__link a{
     /*Share same color*/
+    font-family: 'Raleway', sans-serif;
     color: rgba(0, 150, 153, 1);
 }
 #fig__header2, #backend__link a{
+    font-family: 'Raleway', sans-serif;
     /*Same color as icon2*/
     color: rgba(150, 20, 153, 1);
 }
 #fig__header3, #design__link a{
+    font-family: 'Raleway', sans-serif;
     /*third color*/
     color: rgba(250, 200, 0, 1);
 }
 
 
-/*SELF QUOTE*/
-
-
+/*STATEMENT*/
+.statement__background{
+    width: 100%;
+    background-color:rgba(0, 150, 200, 1);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.statement__container{
+    width: 90%;
+    background-color: rgba(255,255,255,1);
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2.5em 0 2.5em 0;
+    padding: 2em 0 2em 0;
+    max-width: 75em;
+}
+#quote__header{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    padding: 0em 0 1em 0;
+    font-size: 1.25em;
+    color: rgba(0, 150, 200, 1);
+}
+#quote{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: rgba(0, 150, 200, 1);
+    font-style: italic;
+    padding: 1em 1.5em;
+    line-height: 2em;
+}
+#quote__footer{
+    text-align: center;
+    color: rgba(0, 150, 200, 1);
+    font-style: italic;
+    width: 100%;
+    line-height: 2em;
+}
 
 
 /*SIDE BY SIDE PROJECTS WITH ICONS*/
-
+.projects__container{
+    height: 50em;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+}
+.pheader{
+    padding: 2em;
+}
 
 
 
 /*CONTACT ME*/
+
+
+
+
+
+/*FOOTER*/
+
+.footer{
+    height: 15em;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.copyright{
+    color: white;
+}
 
 
 
@@ -381,6 +453,21 @@ main{
         /*Alternating image design*/
         order: 2;
     }
+    
+    .statement__container{
+        width: 80%;
+    }
+    #quote__header{
+        font-size: 1.25em;
+        color: rgba(0, 150, 200, 1);
+    }
+    #quote{
+        font-size: 1.5em;
+        color: rgba(0, 150, 200, 1);
+    }
+    #quote__footer{
+        font-weight: 600;
+        color: rgba(0, 150, 200, 1);
 }
 
 
