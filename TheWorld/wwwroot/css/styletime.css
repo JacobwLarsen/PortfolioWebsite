@@ -183,7 +183,7 @@ main{
 .lheader{
     /*Learning Header is Raleway, spacing*/
     font-family: 'Raleway', sans-serif;
-    font-size: 1.75em;
+    font-size: 2em;
     padding: 1em;
     margin: 1em auto 0 auto;
     width: 100%;
@@ -203,7 +203,7 @@ main{
 .fig__header{
     /*Figure Header is Raleway*/
     font-family: 'Raleway', sans-serif;
-    font-size: 1.5em;
+    font-size: 1.75em;
     padding: 0.5em;
     width: 100%;
 }
@@ -212,6 +212,7 @@ main{
     font-size: 0.9em;
     line-height: 1.75;
     width: 100%;
+    max-width: 29em;
     color: rgba(0,0,0,0.65);
     margin: 0 0 1em 0;
 }
@@ -226,12 +227,15 @@ main{
 }
 .pic1{
     background-image: url("../img/lbox/AS1479.jpg");
+    box-shadow: 12px 12px 20px rgba(0,0,0,0.1);
 }
 .pic2{
     background-image: url("../img/lbox/PP479.jpg");
+    box-shadow: 12px 12px 20px rgba(0,0,0,0.1);
 }
 .pic3{
     background-image: url("../img/lbox/HTML479.jpg");
+    box-shadow: 12px 12px 20px rgba(0,0,0,0.1);
 }
 .projects__link{
     /*Bold*/
@@ -307,17 +311,6 @@ main{
 }
 
 
-/*608 MIN WIDTH*/
-
-
-@media only screen and (min-width: 608px){
-    /*Figure caption size standardized*/
-    .fig__caption{ 
-        width: 450px;
-    }    
-}
-
-
 /*668 MIN WIDTH*/
 
 
@@ -366,10 +359,7 @@ main{
         align-content: center;
         justify-content: center;
         width: 100%;
-        margin: 2em auto 1em auto;
-    }
-    .icon{
-        height: 4em;
+        margin: 3em auto 3em auto;
     }
     .cbox{ 
         /*flexbox to wrap items*/
@@ -379,6 +369,9 @@ main{
         display: flex;
         flex-wrap: wrap;
         margin: 0 auto 2em auto;
+    }
+    .icon{
+        height: 4em;
     }
     .pic__wrap{
         width: 45%;
@@ -417,6 +410,10 @@ main{
         .nav__items{
             padding: 1.25em;
             margin:1.8333em;
+        }
+        .fig__caption{
+            font-size: 1.1em;
+            width: 100%;
         }
     
 }
