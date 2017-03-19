@@ -87,7 +87,7 @@ body{
 .bg{
     background-image: url("../img/bg/bg479v.jpg"); /*vertical image for mobile*/
     min-height: 100%; /*fills screen height*/
-    background-attachment: fixed; /*bg-image is fixed and set to cover*/
+    background-attachment: scroll; /*bg-image is fixed and set to cover*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -278,6 +278,7 @@ main{
     margin: 2.5em 0 2.5em 0;
     padding: 2em 0 2em 0;
     max-width: 75em;
+    box-shadow: 12px 12px 15px rgba(0,0,0,0.25);
 }
 #quote__header{
     font-family: 'Raleway', sans-serif;
@@ -425,6 +426,9 @@ main{
 
 @media only screen and (min-width:850px){
     /*Change 1 column design to 2 columns*/
+    .bg{
+       background-attachment: fixed; 
+    }
     .lbox{
         display: flex;
         flex-wrap: nowrap;
