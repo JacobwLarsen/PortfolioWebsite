@@ -101,10 +101,52 @@
             </section>
             
             <section id="projects" class="projects__container">
-                <div id="projects__header" class="pheader">Start Projects Section</div>
-                <div id="project1" class="projectbox"></div>
+                <div id="projects__header" class="pheader">Projects</div>
+                
+                <div class="tabnav__container">
+                    <ul class="tabnav__container">
+                        <a href="#projects"><li id="design__button" class="tabnav__item" onclick="openProjects('DProjects')">Design</li></a>
+                        <a href="#projects"><li id="backend__button" class="tabnav__item" onclick="openProjects('BProjects')">Backend</li></a>
+                        <a href="#projects"><li id="frontend__button" class="tabnav__item" onclick="openProjects('FProjects')">Frontend</li></a>
+                    </ul>
+                </div>
+                
+                <div id="DProjects" class="tabnav">
+                    <div id="dprojects__header" class="projects__header">
+                      Design and Art Projects
+                    </div>
+                    <div id="pbox__container" class="pbox__container">
+                        <div id="dpbox" class="pbox"></div>
+                        <div id="dpbox" class="pbox"></div>
+                        <div id="dpbox" class="pbox"></div>
+                    </div>
+                </div>
+
+                <div id="BProjects" class="tabnav" style="display:none">
+                    <div id="bprojects__header" class="projects__header">
+                      Backend Projects
+                    </div>
+                    <div id="pbox__container" class="pbox__container">
+                        <div id="dpbox" class="pbox"></div>
+                        <div id="dpbox" class="pbox"></div>
+                        <div id="dpbox" class="pbox"></div>
+                    </div>
+                </div>
+
+                <div id="FProjects" class="tabnav" style="display:none">
+                    <div id="fprojects__header" class="projects__header">
+                      Frontend Projects
+                    </div>
+                    <div id="pbox__container" class="pbox__container">
+                        <div id="dpbox" class="pbox"></div>
+                        <div id="dpbox" class="pbox"></div>
+                        <div id="dpbox" class="pbox"></div>
+                    </div>
+                </div>
             
             </section>
+            
+            
             <section id="contact" class="contact__container"></section>
         </main>
     
@@ -119,6 +161,17 @@
         
         <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="js/mainscript.js"></script>
+        
+        <script> //TabNav for Project section
+            function openProjects(projects) {
+                var i;
+                var x = document.getElementsByClassName("tabnav");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                document.getElementById(projects).style.display = "block";  
+            }
+        </script>
 </body>
     
 </html>
