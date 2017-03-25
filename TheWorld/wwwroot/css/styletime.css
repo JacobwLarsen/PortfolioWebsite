@@ -100,7 +100,7 @@ body{
 /*IMAGE*/
 
 
-.bg, .fbg{
+.bg, .fbg, .wbg{
     min-height: 100%; /*fills screen height*/
     background-attachment: scroll; /*bg-image is fixed and set to cover*/
     background-position: center;
@@ -110,7 +110,7 @@ body{
 .bg{
     background-image: url("../img/bg/bg479v.jpg"); /*vertical image for mobile*/
 }
-.fbg{
+.fbg, .wbg{
     background-image: url("../img/fitness/bg/bg479v.jpg"); /*vertical image for mobile*/
 }
 
@@ -127,7 +127,7 @@ body{
     justify-content: center;
     align-items: center;
 }
-#fnav{
+#fnav, #wnav{
     justify-content: center;
 }
 
@@ -177,7 +177,7 @@ body{
     /*0.3 sec transition to teal*/
     color: rgba(0, 150, 153, 0.9);
 }
-#flogo__name:hover{
+#flogo__name:hover, #wlogo__name:hover{
     color: rgba(0,75,75,1);
 }
 .nav__ul, .logo__name{ 
@@ -185,12 +185,12 @@ body{
     display: none;
 }
 
-#fnav__ul li a{
+#fnav__ul li a, #wnav__ul li a{
     color: rgba(0,75,75,1);
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.9);
 }
-#fnav__ul li a:hover{
+#fnav__ul li a:hover, #wnav__ul li a:hover{
     border-radius: 5px;
     background-color: rgba(0,75,75,0.9);
     color: rgba(255,255,255,1);
@@ -212,13 +212,11 @@ body{
     flex-direction: column;
 }
 .hero__shout{
-    display: flex;
-    flex-wrap: nowrap;
     margin: 1.5em 1em;
     color: rgba(0,75,75,1);
-    text-align: center;
     font-size: 1.5em;
-    
+    display: relative;
+    text-align: center;
 }
 .hero__click{
     display: flex;
@@ -526,7 +524,7 @@ color: rgba(250, 200, 0, 1);
     .bg{
         background-image: url("../img/bg/bg479h.jpg"); 
     }
-    .fbg{
+    .fbg, .wbg{
         background-image: url("../img/fitness/bg/bg479h.jpg"); 
     }
     
@@ -542,7 +540,7 @@ color: rgba(250, 200, 0, 1);
     .nav__ul li{
         margin:0;
     }
-    #nav__ul li:first-child{
+    #nav__ul li:nth-child(4), #nav__ul li:nth-child(5) {
         display: none;
     }
     .hamnav{
@@ -596,7 +594,7 @@ color: rgba(250, 200, 0, 1);
        background-image: url("../img/bg/bg768v.jpg"); 
     }
     
-    .fbg{
+    .fbg, .wbg{
         background-image: url("../img/fitness/bg/bg768v.jpg"); 
     }
 }
@@ -607,17 +605,14 @@ color: rgba(250, 200, 0, 1);
 
 @media only screen and (min-width:850px){
     /*Change 1 column design to 2 columns*/
-    .bg, .fbg{
+    .bg, .fbg, .wbg{
        background-attachment: fixed; 
     }
-    .nav__ul li{
+    #nav__ul li, #nav__ul li:nth-child(4), #nav__ul li:nth-child(5) {
         display: inherit;
     }
-    #fnav__ul li{
+    #fnav__ul li, #wnav__ul li{
         padding: 0;
-    }
-    #nav__ul li:first-child{
-        display: inherit;
     }
     .lbox{
         display: flex;
@@ -675,7 +670,7 @@ color: rgba(250, 200, 0, 1);
     .bg{
         background-image: url(../img/bg/bg1024h.jpg);
     }
-     .fbg{
+     .fbg, .wbg{
         background-image: url("../img/fitness/bg/bg1024h.jpg"); 
     }
 }
@@ -689,7 +684,7 @@ color: rgba(250, 200, 0, 1);
     .bg{
         background-image: url(../img/bg/bg1500h.jpg);
         }
-     .fbg{
+     .fbg, .wbg{
         background-image: url("../img/fitness/bg/bg1500h.jpg"); 
     }
     /*NAV*/
@@ -709,5 +704,4 @@ color: rgba(250, 200, 0, 1);
             font-size: 1.1em;
             width: 100%;
         }
-    
 }
