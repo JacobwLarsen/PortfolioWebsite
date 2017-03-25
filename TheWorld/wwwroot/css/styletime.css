@@ -100,13 +100,18 @@ body{
 /*IMAGE*/
 
 
-.bg{
-    background-image: url("../img/bg/bg479v.jpg"); /*vertical image for mobile*/
+.bg, .fbg{
     min-height: 100%; /*fills screen height*/
     background-attachment: scroll; /*bg-image is fixed and set to cover*/
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.bg{
+    background-image: url("../img/bg/bg479v.jpg"); /*vertical image for mobile*/
+}
+.fbg{
+    background-image: url("../img/fitness/bg/bg479v.jpg"); /*vertical image for mobile*/
 }
 
 
@@ -122,6 +127,10 @@ body{
     justify-content: center;
     align-items: center;
 }
+#fnav{
+    justify-content: center;
+}
+
 .hamnav{ 
     /*Hamnav is absolute in top left*/
     position: absolute;
@@ -148,6 +157,7 @@ body{
     font-size: 1em;
     font-weight: 500;
 }
+
 .nav__items a:hover{
     color: rgba(0, 153, 150, 1); 
 }
@@ -167,11 +177,69 @@ body{
     /*0.3 sec transition to teal*/
     color: rgba(0, 150, 153, 0.9);
 }
+#flogo__name:hover{
+    color: rgba(0,75,75,1);
+}
 .nav__ul, .logo__name{ 
     /*Don't show until screen is large enough*/
     display: none;
 }
 
+#fnav__ul li a{
+    color: rgba(0,75,75,1);
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#fnav__ul li a:hover{
+    border-radius: 5px;
+    background-color: rgba(0,75,75,0.9);
+    color: rgba(255,255,255,1);
+}
+
+
+
+/*HERO*/
+
+.hero__container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    width: 70%;
+    margin: 12.5em auto 0 auto;
+    background-color: rgba(255,255,255,1);
+    border-radius: 5px;
+    flex-direction: column;
+}
+.hero__shout{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 1.5em 1em;
+    color: rgba(0,75,75,1);
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+.hero__click{
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 0 auto 2em auto; 
+    justify-content: center;
+    align-items: center;
+}
+.hero__click a{
+    background-color:rgba(0,75,75,0.8);
+    color: rgba(255,255,255,1);
+    border-radius: 5px;
+    padding: 1em;
+    transition: all 0.3s ease-in-out; 
+}
+.hero__click a:hover{
+    background-color: rgba(0,75,75,1);
+    color: rgba(255,255,255,1);
+    border-radius: 5px;
+    padding: 1em;
+}
 
 /*MAIN*/
 main{
@@ -458,6 +526,9 @@ color: rgba(250, 200, 0, 1);
     .bg{
         background-image: url("../img/bg/bg479h.jpg"); 
     }
+    .fbg{
+        background-image: url("../img/fitness/bg/bg479h.jpg"); 
+    }
     
     
     /*NAV*/
@@ -465,10 +536,14 @@ color: rgba(250, 200, 0, 1);
         justify-content: flex-end;
     }
     .nav__ul{
+        font-size: 0.95em;
         display: inherit;
     }
     .nav__ul li{
         margin:0;
+    }
+    #nav__ul li:first-child{
+        display: none;
     }
     .hamnav{
         display: none;
@@ -493,6 +568,7 @@ color: rgba(250, 200, 0, 1);
     .nav__container, #hamnav{
          height: 6em;
     }
+    
     .logo{
         margin: 1.5em 0 0.7em 1.5em;
     }
@@ -519,6 +595,10 @@ color: rgba(250, 200, 0, 1);
     .bg{
        background-image: url("../img/bg/bg768v.jpg"); 
     }
+    
+    .fbg{
+        background-image: url("../img/fitness/bg/bg768v.jpg"); 
+    }
 }
 
 
@@ -527,8 +607,17 @@ color: rgba(250, 200, 0, 1);
 
 @media only screen and (min-width:850px){
     /*Change 1 column design to 2 columns*/
-    .bg{
+    .bg, .fbg{
        background-attachment: fixed; 
+    }
+    .nav__ul li{
+        display: inherit;
+    }
+    #fnav__ul li{
+        padding: 0;
+    }
+    #nav__ul li:first-child{
+        display: inherit;
     }
     .lbox{
         display: flex;
@@ -586,6 +675,9 @@ color: rgba(250, 200, 0, 1);
     .bg{
         background-image: url(../img/bg/bg1024h.jpg);
     }
+     .fbg{
+        background-image: url("../img/fitness/bg/bg1024h.jpg"); 
+    }
 }
 
 
@@ -597,13 +689,21 @@ color: rgba(250, 200, 0, 1);
     .bg{
         background-image: url(../img/bg/bg1500h.jpg);
         }
+     .fbg{
+        background-image: url("../img/fitness/bg/bg1500h.jpg"); 
+    }
     /*NAV*/
         .nav__ul{
             margin: 0 3.166em 0 0;
         }
+    
         .nav__items a{
             padding: 1.25em;
             margin:1.8333em;
+        }
+        #fnav__ul li a{
+            padding: 1em;
+            margin: 1em;
         }
         .fig__caption{
             font-size: 1.1em;
