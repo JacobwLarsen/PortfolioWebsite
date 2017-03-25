@@ -139,19 +139,19 @@ body{
     /*Right margin*/
     margin: 0 1.166em 0 0;
 }
-.nav__items{ 
-    /*basic item things*/
+
+.nav__items a{
+    color: rgba(250, 250, 250, 1); 
+    transition: all 0.3s ease-in-out; 
     padding: 0.75em;
     margin:0.3333em;
     font-size: 1em;
     font-weight: 500;
-    color: rgba(250, 250, 250, 1);
-    transition: all 0.3s ease-in-out; 
 }
-.nav__items:hover { 
-    /*On hover to teal over .3s*/
-    color: rgba(0, 150, 153, 1);
+.nav__items a:hover{
+    color: rgba(0, 153, 150, 1); 
 }
+
 .logo__name{ 
     /*Top left name next to logo*/
     position: absolute;
@@ -394,7 +394,7 @@ color: rgba(250, 200, 0, 1);
     align-items: center;
     justify-content: center;
 }
-.dpimg{
+.dpimg, .fpimg, .bpimg{
     height: auto;
     margin: 1em auto;
     box-shadow: 12px 12px 20px rgba(0,0,0,0.1);
@@ -403,10 +403,6 @@ color: rgba(250, 200, 0, 1);
 }
 .pbox{
     margin: 1em;
-}
-
-#dpimg3{
-    max-height: 300px;
 }
 
 
@@ -470,6 +466,9 @@ color: rgba(250, 200, 0, 1);
     }
     .nav__ul{
         display: inherit;
+    }
+    .nav__ul li{
+        margin:0;
     }
     .hamnav{
         display: none;
@@ -602,7 +601,7 @@ color: rgba(250, 200, 0, 1);
         .nav__ul{
             margin: 0 3.166em 0 0;
         }
-        .nav__items{
+        .nav__items a{
             padding: 1.25em;
             margin:1.8333em;
         }

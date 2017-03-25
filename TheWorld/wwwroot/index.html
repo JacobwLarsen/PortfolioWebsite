@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -17,8 +18,8 @@
 </head>
     
     <body>
-        <p id="note" class="note">This is simply a mockup for now. Responsiveness, optimization, and content will be added soon. Site coming soon - March 2017.</p>
-        <a href="#bg"><img id="top__icon" class="top__icon" src="img/icons/top.svg"></a>
+        <p id="note" class="note">This is simply a layout for now. Responsiveness, optimization, functionality, and content will be added soon. Site coming soon - April 2017.</p>
+        <a data-scroll href="#bg"><img id="top__icon" class="top__icon" src="img/icons/top.svg"></a>
         <div id="bg" class="bg">
             <nav id="nav" class="nav__container">
                 <a href="#" class="hamnava" id="navToggle">
@@ -31,9 +32,14 @@
                     <p id="logo__name" class="logo__name">arsen</p>
                 </a>
                 <ul id="nav__ul" class="nav__ul">
-                    <a href="#learning"><li id="nav__item1" class="nav__items">Learning</li></a>
-                    <a href="#projects"><li id="nav__item2" class="nav__items">Projects</li></a>
-                    <a href="#"><li id="nav__item3" class="nav__items">Contact</li></a>
+                    <li id="nav__item1" class="nav__items">
+                        <a data-scroll href="#learning">Learning</a></li>
+                    <li id="nav__item2" class="nav__items">
+                        <a data-scroll href="#projects">Projects</a></li>
+                    <li id="nav__item3" class="nav__items">
+                        <a data-scroll href="#">Contact</a></li>
+                    <li id="nav__item4" class="nav__items">
+                        <a data-scroll href="#">Fitness Tracker</a></li>
                 </ul>
             </nav>
         </div>
@@ -52,7 +58,7 @@
                                 Frontend Development
                             </div>
                         <div id="fig__caption1" class="fig__caption">
-                            Since December, 2016 I've been diving into some of the main frontend technologies, such as HTML5, CSS3, JavaScript, and jQuery. I've also been studying UX/UI topics to better understand web-development from a user perspective. You can see more of my front-end work in the <span id="frontend__link" class="projects__link" onclick="openProjects('FProjects')"><a href="#projects">Projects Section.</a></span>
+                            Since December, 2016 I've been diving into some of the main frontend technologies, such as HTML5, CSS3, JavaScript, and jQuery. I've also been studying UX/UI topics to better understand web-development from a user perspective. You can see more of my front-end work in the <span id="frontend__link" class="projects__link" onclick="openProjects('FProjects')"><a data-scroll href="#projects">Projects Section.</a></span>
                         </div>
                     </div>
                     <div id="pic1__wrap" class="pic__wrap pic1">
@@ -67,7 +73,7 @@
                             Backend Development
                         </div>
                         <div id="fig__caption2" class="fig__caption">
-                            Since February, 2017 I've been working a bit in C# and Python using sites like Udacity, Pluralsight, Udemy, Coursera, and the MIT Open Courseware. Currently I'm working through the C# path on Pluralsight. Click <span id="backend__link" class="projects__link" onclick="openProjects('BProjects')"><a href="#projects">here</a></span> to see more.
+                            Since February, 2017 I've been working a bit in C# and Python using sites like Udacity, Pluralsight, Udemy, Coursera, and the MIT Open Courseware. Currently I'm working through the C# path on Pluralsight. Click <span id="backend__link" class="projects__link" onclick="openProjects('BProjects')"><a data-scroll href="#projects">here</a></span> to see more.
                         </div>
                         </div>
                     <div id="pic2__wrap" class="pic__wrap pic2">
@@ -82,7 +88,7 @@
                             Design, Graphics, and Art
                         </div>
                         <div id="fig__caption3" class="fig__caption">
-                            I've always had a passion for all things creative, whether it be logo and graphic design, experience design, photo-editing, abstract-realistic drawing/painting, or architecture of both physical and digital space. Check out some of my work in the <span id="design__link" class="projects__link"><a href="#projects" onclick="openProjects('DProjects')">Projects Section.</a></span>
+                            I've always had a passion for all things creative, whether it be logo and graphic design, experience design, photo-editing, abstract-realistic drawing/painting, or architecture of both physical and digital space. Check out some of my work in the <span id="design__link" class="projects__link"><a data-scroll href="#projects" onclick="openProjects('DProjects')">Projects Section.</a></span>
                         </div>
                         </div>
                     <div id="pic3__wrap" class="pic3 pic__wrap">
@@ -152,9 +158,34 @@
                       Backend Projects
                     </div>
                     <div id="bpbox__container" class="pbox__container">
-                        <div id="bpbox1" class="pbox"></div>
-                        <div id="bpbox2" class="pbox"></div>
-                        <div id="bpbox3" class="pbox"></div>
+                        <div id="bpbox1" class="pbox">
+                            <img id="bpimg1" class="bpimg" src="http://placehold.it/479x250">
+                        </div>
+                        <div id="bpbox2" class="pbox">
+                            <img id="bpimg2" class="bpimg" src="http://placehold.it/479x250">
+                        </div>
+                        <div id="bpbox3" class="pbox">
+                            <img id="bpimg3" class="bpimg" src="http://placehold.it/479x250">
+                        </div>
+                        <div id="bpbox4" class="pbox">
+                            <img id="bpimg4" class="bpimg" src="http://placehold.it/479x250">
+                        </div>
+                        <div id="bpbox5" class="pbox">
+                            <img id="bpimg5" class="bpimg" src="http://placehold.it/479x250">
+                        </div>
+                        <div id="bpbox6" class="pbox">
+                            <img id="bpimg6" class="bpimg" src="http://placehold.it/479x250">
+                        </div>
+                        <div id="bpbox7" class="pbox">
+                            <img id="bpimg7" class="bpimg" src="http://placehold.it/479x250">
+                        </div>
+                        <div id="bpbox8" class="pbox">
+                            <img id="bpimg8" class="bpimg" src="http://placehold.it/479x250">
+                        </div>
+                        <div id="bpbox9" class="pbox">
+                            <img id="bpimg9" class="bpimg" src="http://placehold.it/479x250">
+                        </div>
+                    
                     </div>
                 </div>
 
@@ -163,9 +194,34 @@
                       Frontend Projects
                     </div>
                     <div id="fpbox__container" class="pbox__container">
-                        <div id="fpbox1" class="pbox"></div>
-                        <div id="fpbox2" class="pbox"></div>
-                        <div id="fpbox3" class="pbox"></div>
+                        <div id="fpbox1" class="pbox">
+                            <img id="fpimg1" class="fpimg" src="img/fpbox/fpimg1.jpg">
+                        </div>
+                        <div id="fpbox2" class="pbox">
+                            <img id="fpimg2" class="fpimg" src="img/fpbox/fpimg5.jpg">
+                        </div>
+                        <div id="fpbox3" class="pbox">
+                            <img id="fpimg3" class="fpimg" src="img/lbox/AS1479.jpg">
+                        </div>
+                        <div id="fpbox4" class="pbox">
+                            <img id="fpimg4" class="fpimg" src="img/fpbox/fpimg2.jpg">
+                        </div>
+                        <div id="fpbox5" class="pbox">
+                            <img id="fpimg5" class="fpimg" src="img/fpbox/fpimg3.jpg">
+                        </div>
+                        <div id="fpbox6" class="pbox">
+                            <img id="fpimg6" class="fpimg" src="img/fpbox/fpimg6.jpg">
+                        </div>
+                        <div id="fpbox7" class="pbox">
+                            <img id="fpimg7" class="fpimg" src="img/fpbox/fpimg7.jpg">
+                        </div>
+                        <div id="fpbox8" class="pbox">
+                            <img id="fpimg8" class="fpimg" src="http://placehold.it/479x250">
+                        </div>
+                        <div id="fpbox9" class="pbox">
+                            <img id="fpimg9" class="fpimg" src="http://placehold.it/479x250">
+                        </div>
+                    
                     </div>
                 </div>
             
@@ -186,11 +242,17 @@
             </div>
         </footer>
         
-        
+
         
         
         <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="js/smooth-scroll.js"></script>
         <script type="text/javascript" src="js/mainscript.js"></script>
+        
+        
+        <script> //Smooth Scrolling for data-scroll enabled hrefs
+	       smoothScroll.init();
+        </script>
         
         <script> //TabNav for Project section
             function openProjects(projects) {
@@ -202,6 +264,11 @@
                 document.getElementById(projects).style.display = "block";  
             }
         </script>
+        
+        
+
+        
+
 </body>
     
 </html>
