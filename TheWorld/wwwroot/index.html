@@ -14,13 +14,14 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" href="../css/styletime.css" />
+    <link rel="stylesheet" type="text/css" href="css/styletime.css" />
 </head>
     
     <body>
         <p id="note" class="note">This is simply a layout for now. Responsiveness, optimization, functionality, and content will be added soon. Site coming soon - April 2017.</p>
         <a data-scroll href="#bg"><img id="top__icon" class="top__icon" src="img/icons/top.svg"></a>
         <div id="bg" class="bg">
+            
             <nav id="nav" class="nav__container">
                 <a href="#" class="hamnava" id="navToggle">
                     <img id="hamnav" class="hamnav" src="img/hamnav/hamnav_black.svg">
@@ -28,7 +29,7 @@
                 <a href="#" class="logoa">
                     <img id="logo" class="logo" src="img/logo/logo_white.svg">
                 </a>
-                <a href="/index.html">
+                <a href="#">
                     <p id="logo__name" class="logo__name">arsen</p>
                 </a>
                 <ul id="nav__ul" class="nav__ul">
@@ -42,13 +43,14 @@
                         <a data-scroll href="#">Contact</a>
                     </li>
                     <li id="nav__item4" class="nav__items">
-                        <a data-scroll href="/fitness.html">Fitness Tracker</a>
+                        <a data-scroll href="#">Fitness Tracker</a>
                     </li>
                     <li id="nav__item5" class="nav__items">
-                        <a data-scroll href="/theworld.html">World App</a>
+                        <a data-scroll href="theworld.html">World App</a>
                     </li>
                 </ul>
             </nav>
+            
         </div>
         
         <main id="main" class="main__container">
@@ -261,6 +263,39 @@
 	       smoothScroll.init();
         </script>
         
+        <script>
+
+            var menu = document.querySelector('#hamnav');
+            var menuClose = document.querySelector('#close');
+    //        var main = document.querySelector('main');
+            var drawer = document.querySelector('#nav__ul');
+    //        var header = document.querySelector('header');
+
+           menu.addEventListener('click', function(e){
+    //           on #hamburger click we toggle the drawer.open styles
+
+                drawer.classList.toggle('open');
+                e.stopPropagation();
+            });
+
+    //        main.addEventListener('click', function(e) {
+    ////            on main click we toggle the drawer.open styles off
+    //            
+    //            drawer.classList.toggle('open');
+    //            e.stopPropagation();
+    //        });
+    //          
+             menuClose.addEventListener('click', function(e) {
+    //           on close click we toggle the drawer.open styles off
+
+                drawer.classList.toggle('open');
+                e.stopPropagation();
+            });
+
+              //How do I make a 'close' class work here? How do I make the main and header turn off the 'open' class but not turn it back on when clicked??? Conditional statements??? Maybe use a new button that can appears with the menu that can close it instead of main or header!!!!
+
+    </script>
+        
         <script> //TabNav for Project section
             function openProjects(projects) {
                 var i;
@@ -271,6 +306,7 @@
                 document.getElementById(projects).style.display = "block";  
             }
         </script>
+        
         
         
 

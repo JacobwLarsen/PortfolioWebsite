@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     
-    <link rel="stylesheet" type="text/css" href="../css/styletime.css" />
+    <link rel="stylesheet" type="text/css" href="css/styletime.css" />
 </head>
     
     
@@ -22,48 +22,93 @@
 <body>
    
     <p id="note" class="note">This is simply a layout for now. Responsiveness, optimization, functionality, and content will be added soon. Site coming soon - April 2017.</p>
-        <a data-scroll href="#fbg"><img id="top__icon" class="top__icon" src="img/icons/top.svg"></a>
+    
+        <a data-scroll href="#wbg"><img id="wtop__icon" class="top__icon" src="img/icons/top.svg"></a>
+    
         <div id="wbg" class="wbg">
-            <nav id="wnav" class="nav__container">
+            
+             <nav id="nav" class="nav__container">
                 <a href="#" class="hamnava" id="navToggle">
-                    <img id="hamnav" class="hamnav" src="img/hamnav/hamnav_black.svg">
+                    <img id="hamnav" class="hamnav" src="img/hamnav/hamnav_teal.svg">
                 </a>
-                <a href="#" class="logoa">
-                    <img id="wlogo" class="logo" src="img/logo/logo_white.svg">
+                <a href="index.html" class="logoa">
+                    <img id="wlogo" class="logo" src="img/logo/logo_teal.svg">
                 </a>
-                <a href="/index.html">
+                <a href="index.html">
                     <p id="wlogo__name" class="logo__name">arsen</p>
                 </a>
                 <ul id="wnav__ul" class="nav__ul">
-                    <li id="wnav__item2" class="nav__items">
-                        <a data-scroll href="#start">Get Started</a></li>
-                    <li id="wnav__item4" class="nav__items">
-                        <a data-scroll href="#login">Login</a></li>
+                    <li id="nav__item1" class="wnav__items">
+                        <a data-scroll href="#world">GO!</a>
+                    </li>
+                    <li id="nav__item2" class="wnav__items">
+                        <a data-scroll href="#login">Login</a>
+                    </li>
                 </ul>
             </nav>
             
-            <section id="whero__container" class="hero__container">
-                <div id="whero__shout" class="hero__shout">
-                    <p id="whero__shout__text" class="hero__shout__text">
-                        Track your adventure, without a care in the World
-                    </p>
+                <div id="whero__container" class="hero__container">
+                    <div id="whero__shout" class="hero__shout">
+                        <p id="whero__shout__text" class="hero__shout__text">
+                            Track your adventure, without a care in the World
+                        </p>
+                    </div>
+                    <div id="whero__click" class="hero__click">
+                        <a href="#start" id="wstart__link" class="start__link">Try it Now!
+                        </a>
+                    </div>
                 </div>
-                <div id="whero__click" class="hero__click">
-                    <a href="#start" id="wstart__link" class="start__link">Try it Now!
-                    </a>
-                </div>
-            
-            </section>
-        </div>
+         </div>
     
     <main id="wmain" class="main__container">
+        
+        <section id="world" class="world">
+            <header id="wheader" class="wheader">
+                <p id="wshout" class="shout">
+                    Welcome to the world<br/>
+                <span id="journey">
+                    Your journey starts here
+                </span>
+                </p>
+            </header>
+            
+            <div id="trip__form" class="form">
+                <div id="form__header" class="form__header">
+                    Enter a date and a location that you'd like to visit below:
+                </div>
+                <form>
+                    <div class="labels">
+                        <label>Date: </label>
+                        <input type="text" class="longinp"/>
+                    </div>
+                    <div class="labels">
+                        <label>Location: </label>
+                        <input type="text" class="longinp"/>
+                    </div>
+                    <div class="labels">
+                        <input type="submit" value="Add" id="submit__button">
+                    </div>
+                </form>
+            
+            
+            </div>
+        </section>
     
     
     
     
     </main>
         
-        
+    <footer id="footer" class="footer">
+            <div id="icons" class="icon__container">
+                <a href="https://www.facebook.com/JakeLarsen11" target="_blank"><img id="fb__footer" class="fb__icon footer__icon" src="img/icons/fb.svg"></a>
+                <a href="https://www.linkedin.com/in/jacoblarsendk/" target="_blank"><img id="li__footer" class="li__icon footer__icon" src="img/icons/li.svg"></a>
+                <a href="https://github.com/JacobwLarsen" target="_blank"><img id="gh__footer" class="gh__icon footer__icon" src="img/icons/gh.svg"></a>
+            </div>
+            <div id="copyright" class="copyright">
+                &copy; 2017 - Jacob Larsen.
+            </div>
+        </footer>    
 </body>
     
     
@@ -74,6 +119,39 @@
     
     <script> //Smooth Scrolling for data-scroll enabled hrefs
         smoothScroll.init();
+    </script>
+    
+      <script>
+
+            var menu = document.querySelector('#hamnav');
+            var menuClose = document.querySelector('#close');
+    //        var main = document.querySelector('main');
+            var drawer = document.querySelector('#wnav__ul');
+    //        var header = document.querySelector('header');
+
+           menu.addEventListener('click', function(e){
+    //           on #hamburger click we toggle the drawer.open styles
+
+                drawer.classList.toggle('open');
+                e.stopPropagation();
+            });
+
+    //        main.addEventListener('click', function(e) {
+    ////            on main click we toggle the drawer.open styles off
+    //            
+    //            drawer.classList.toggle('open');
+    //            e.stopPropagation();
+    //        });
+    //          
+             menuClose.addEventListener('click', function(e) {
+    //           on close click we toggle the drawer.open styles off
+
+                drawer.classList.toggle('open');
+                e.stopPropagation();
+            });
+
+              //How do I make a 'close' class work here? How do I make the main and header turn off the 'open' class but not turn it back on when clicked??? Conditional statements??? Maybe use a new button that can appears with the menu that can close it instead of main or header!!!!
+
     </script>
     
 </html>
